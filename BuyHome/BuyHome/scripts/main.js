@@ -1,7 +1,20 @@
-﻿$(function () {
+﻿var buyHome = buyHome || {};
+buyHome.common = {
+    autoResizeImage: function () {
+        $('.auto-size').each(function () {
+            $(this).css('background-image', 'url(' + $(this).find('img').attr('src') + ')');
+            $(this).find('img').remove();
+
+        })
+    }
+}
+$(window).on('load', function () {
+    buyHome.common.autoResizeImage();
+});
+//init function
+$(function () {
     //slick top
     $('.slick-top').slick({
-        dots: true,
         infinite: false,
         speed: 300,
         slidesToShow: 5,
@@ -13,8 +26,6 @@
               settings: {
                   slidesToShow: 3,
                   slidesToScroll: 3,
-                  infinite: true,
-                  dots: true
               }
           },
           {
@@ -51,12 +62,10 @@
               settings: {
                   slidesToShow: 3,
                   slidesToScroll: 3,
-                  infinite: true,
-                  dots: true
               }
           },
           {
-              breakpoint: 600,
+              breakpoint: 767,
               settings: {
                   slidesToShow: 2,
                   slidesToScroll: 2

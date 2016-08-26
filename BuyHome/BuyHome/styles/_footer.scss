@@ -4,7 +4,8 @@ footer {
     min-height: 185px;
     padding: 20px 10px;
     font-size: 14px;
-    margin-top:45px;
+    margin-top: 45px;
+
     .menu {
         padding: 0;
         margin: 0;
@@ -13,6 +14,10 @@ footer {
         li {
             float: left;
             position: relative;
+
+            @include device {
+                padding: 10px 0;
+            }
 
             a {
                 color: #fff;
@@ -33,10 +38,29 @@ footer {
                 content: none;
             }
         }
+
+        @include device {
+            background-color: #4d4d4d;
+            width:100%;
+            margin-bottom:10px;
+        }
     }
 
     .info {
         padding: 0 15px;
         color: #fff;
+    }
+
+    @include device {
+        .search-control {
+            width: calc(100% - 190px);
+            float: left !important;
+            margin-bottom: 15px;
+        }
+
+        .social {
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
     }
 }

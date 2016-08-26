@@ -83,8 +83,8 @@ header {
             margin: 0;
         }
 
-        ul {
-            li {
+        ul.navbar-nav {
+            > li {
                 position: relative;
 
                 a {
@@ -140,6 +140,49 @@ header {
                     a {
                         padding: 17px 9px;
                     }
+                }
+            }
+        }
+
+        .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+            background-color: transparent;
+        }
+
+        .dropdown-menu.sub-menu {
+            min-width: 160px;
+            border: 0;
+            background-color: transparent;
+            @include box-shadow(none);
+            background-image: url('../images/sub_menu.PNG');
+            background-position-y: -2px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            list-style: none;
+            padding: 15px 20px;
+            left: 50%;
+            @include translate2D(-50%,0);
+            border-top: 5px solid $blue-primary-color;
+
+            li {
+                position: relative;
+                border-bottom: 1px solid #7bc7e8;
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+
+                &:before {
+                    content: "\f111";
+                    font: normal normal normal 14px/1 FontAwesome;
+                    color: #00AAEB;
+                    font-size: 8px;
+                    position: absolute;
+                    left: 0;
+                    top: 15px;
+                }
+
+                a {
+                    padding: 10px 15px;
                 }
             }
         }

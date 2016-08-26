@@ -27,7 +27,7 @@
                     <div class="clearfix">
                         <h1><a href="#"><img src="images/logo.PNG" alt="logo" /></a></h1>
                     </div>
-                    <div class="clearfix">
+                    <div class="clearfix hidden-device hidden-sm hidden-xs">
                         <ul class="social pull-right">
                             <li><a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                             <li><a href="#" title="twiter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -58,22 +58,10 @@
                             <li class="active hidden-device hidden-sm hidden-xs">
                                 <a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
                             </li>
-                            <li class="parent-menu">
-                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <li class="">
+                                <a href="javascript:void(0)">
                                     GIỚI THIỆU
                                 </a>
-                                <ul class="dropdown-menu sub-menu">
-                                    <li class="">
-                                        <a href="http://vietnammentalhealthatlas.com/hapro/vi/gioi-thieu/">
-                                            Giới thiệu chung
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="http://vietnammentalhealthatlas.com/hapro/vi/ban-lanh-dao/">
-                                            Ban lãnh đạo
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
                             <li class="">
                                 <a href="#">
@@ -90,10 +78,22 @@
                                     TIN TỨC
                                 </a>
                             </li>
-                            <li class="">
-                                <a href="#">
+                            <li class="parent-menu">
+                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                     BẤT ĐỘNG SẢN BÁN
                                 </a>
+                                <ul class="dropdown-menu sub-menu">
+                                    <li class="">
+                                        <a href="http://vietnammentalhealthatlas.com/hapro/vi/gioi-thieu/">
+                                            DỰ ÁN
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="http://vietnammentalhealthatlas.com/hapro/vi/ban-lanh-dao/">
+                                            NHÀ PHỐ
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="">
                                 <a href="#">
@@ -119,7 +119,7 @@
         <span class="search-info">
             <span><img src="images/ico_money.PNG" /></span>
             <span>TƯ VẤN NHANH</span><span class="font-bold">0903 136 999</span>
-        </span>        
+        </span>
         <span class="search-control pull-right">
             <input type="text">
             <label>
@@ -133,27 +133,38 @@
             <div class="container-sm">
                 <div class="slick-top">
                     <div>
-                        <img src="images/sl_4.PNG" />
+                        <div class="img-circle auto-size">
+                            <img src="images/sl_4.PNG" />
+                        </div>
+                       
                         <span>CHUNG CƯ</span>
                         <a href="#">Xem tiếp >></a>
                     </div>
                     <div>
-                        <img src="images/sl_3.PNG" />
+                        <div class="img-circle auto-size">
+                            <img src="images/sl_3.PNG" />
+                        </div>
                         <span>SHOPHOUSE</span>
                         <a href="#">Xem tiếp >></a>
                     </div>
                     <div>
-                        <img src="images/sl_2.PNG" />
+                        <div class="img-circle auto-size">
+                            <img src="images/sl_2.PNG" />
+                        </div>
                         <span>CONDOTEL</span>
                         <a href="#">Xem tiếp >></a>
                     </div>
                     <div>
-                        <img src="images/sl_5.PNG" />
+                        <div class="img-circle auto-size">
+                            <img src="images/sl_5.PNG" />
+                        </div>
                         <span>OFFICETEL</span>
                         <a href="#">Xem tiếp >></a>
                     </div>
                     <div>
-                        <img src="images/sl_1.PNG" />
+                        <div class="img-circle auto-size">
+                            <img src="images/sl_1.PNG" />
+                        </div>
                         <span>VILLA</span>
                         <a href="#">Xem tiếp >></a>
                     </div>
@@ -164,28 +175,25 @@
             <div class="container-sm">
                 <ul class="clearfix">
                     <li class="active"><a href="#">BẤT ĐỘNG SẢN BÁN CHẠY</a></li>
-                    <li><a href="#">BẤT ĐỘNG SẢN CHO THUÊ</a></li>
-                    <li><a href="#">BẤT ĐỘNG SẢN MUA</a></li>
-                    <li><a href="#">BẤT ĐỘNG SẢN THUÊ</a></li>
+                    <li class="hidden-device hidden-sm hidden-xs"><a href="#">BẤT ĐỘNG SẢN CHO THUÊ</a></li>
+                    <li class="hidden-device hidden-sm hidden-xs"><a href="#">BẤT ĐỘNG SẢN MUA</a></li>
+                    <li class="hidden-device hidden-sm hidden-xs"><a href="#">BẤT ĐỘNG SẢN THUÊ</a></li>
                 </ul>
-                <div class="row list-image clearfix" id="list-house">
+                <div class="list-image clearfix" id="list-house">
                     <div>
                         <div class="box">
-                            <div class="box-img" >
-                                <img src="images/list_1.PNG" />
-                            </div>
-                            <div class="content">
+                            <img src="images/list_1.PNG" />
+                            <div class="bg-white">
                                 <hr />
                                 <span>Chỉ 180 triệu sở hữu ngay căn hộ singapore - ck 18% và tặng gói combo 200 triệu</span>
                             </div>
+
                         </div>
                     </div>
                     <div>
                         <div class="box">
-                            <div class="box-img">
-                                <img src="images/list_1.PNG" />
-                            </div>
-                            <div class="content">
+                            <img src="images/list_2.PNG" />
+                            <div class="bg-white">
                                 <hr />
                                 <span>Bán căn hộ gần giao nhà 760tr/ 2pn, (ký hđ 15%- 114triệu)</span>
                             </div>
@@ -193,21 +201,18 @@
                     </div>
                     <div>
                         <div class="box">
-                            <div class="box-img">
-                                <img src="images/list_1.PNG" />
-                            </div>
-                            <div class="content">
+                            <img src="images/list_1.PNG" />
+                            <div class="bg-white">
                                 <hr />
                                 <span>Chỉ 180 triệu sở hữu ngay căn hộ singapore - ck 18% và tặng gói combo 200 triệu</span>
                             </div>
+
                         </div>
                     </div>
                     <div>
                         <div class="box">
-                            <div class="box-img">
-                                <img src="images/list_1.PNG" />
-                            </div>
-                            <div class="content">
+                            <img src="images/list_2.PNG" />
+                            <div class="bg-white">
                                 <hr />
                                 <span>Bán căn hộ gần giao nhà 760tr/ 2pn, (ký hđ 15%- 114triệu)</span>
                             </div>
@@ -393,16 +398,16 @@
         </div>
     </section>
     <div class="light-bg footer"></div>
+    <div class="wave"></div>
     <footer>
         <div class="container-sm">
             <div class="clearfix">
-                <ul class="menu">
-                    <li><a href="#">TRANG CHỦ</a></li>
-                    <li><a href="#">GIỚI THIỆU</a></li>
-                    <li><a href="#">CHUYÊN GIA BUYHOMES</a></li>
-                    <li><a href="#">LIÊN HỆ</a></li>
-                    <li><a href="#">SITEMAP</a></li>
-                </ul>
+                <span class="search-control pull-right hidden-md hidden-lg">
+                    <input type="text">
+                    <label>
+                        <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    </label>
+                </span>
                 <ul class="social pull-right">
                     <li><a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                     <li><a href="#" title="twiter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -410,6 +415,14 @@
                     <li><a href="#" title="skype"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
                     <li><a href="#" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                 </ul>
+                <ul class="menu pull-left">
+                    <li><a href="#">TRANG CHỦ</a></li>
+                    <li><a href="#">GIỚI THIỆU</a></li>
+                    <li><a href="#">CHUYÊN GIA BUYHOMES</a></li>
+                    <li><a href="#">LIÊN HỆ</a></li>
+                    <li><a href="#">SITEMAP</a></li>
+                </ul>
+               
             </div>
             <div class="info">
                 <span class="font-bold">CÔNG TY CỔ PHẦN ĐẦU TƯ TIẾP THỊ BẤT ĐỘNG SẢN VIỆT NAM</span>
