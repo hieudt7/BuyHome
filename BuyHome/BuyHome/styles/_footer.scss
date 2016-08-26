@@ -1,0 +1,42 @@
+footer {
+    background-image: url('../images/bg_footer.PNG');
+    background-size: cover;
+    min-height: 185px;
+    padding: 20px 10px;
+    font-size: 14px;
+    margin-top:45px;
+    .menu {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            float: left;
+            position: relative;
+
+            a {
+                color: #fff;
+                padding: 15px;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 50%;
+                background-color: #fff;
+                top: 50%;
+                @include translate2D(0,-50%);
+            }
+
+            &:last-child:after {
+                content: none;
+            }
+        }
+    }
+
+    .info {
+        padding: 0 15px;
+        color: #fff;
+    }
+}
