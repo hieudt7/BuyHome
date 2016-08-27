@@ -41,8 +41,8 @@ footer {
 
         @include device {
             background-color: #4d4d4d;
-            width:100%;
-            margin-bottom:10px;
+            width: 100%;
+            margin-bottom: 10px;
         }
     }
 
@@ -61,6 +61,16 @@ footer {
         .social {
             margin-top: 10px;
             margin-bottom: 15px;
+        }
+    }
+
+    @include xxs {
+        .search-control {
+            width: 100%;
+        }
+
+        .social {
+            float: left !important;
         }
     }
 }

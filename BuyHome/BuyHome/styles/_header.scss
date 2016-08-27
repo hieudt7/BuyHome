@@ -115,7 +115,7 @@ header {
                         left: 0;
                     }
 
-                    >a {
+                    > a {
                         color: $blue-secondary-color;
                     }
                 }
@@ -148,41 +148,50 @@ header {
             background-color: transparent;
         }
 
-        .dropdown-menu.sub-menu {
-            min-width: 160px;
-            border: 0;
-            background-color: transparent;
-            @include box-shadow(none);
-            background-image: url('../images/sub_menu.PNG');
-            background-position-y: -2px;
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            list-style: none;
-            padding: 15px 20px;
-            left: 50%;
-            @include translate2D(-50%,0);
-            border-top: 5px solid $blue-primary-color;
+        li {
+            .dropdown-menu.sub-menu {
+                min-width: 160px;
+                border: 0;
+                background-color: transparent;
+                @include box-shadow(none);
+                background-image: url('../images/sub_menu.PNG');
+                background-position: 0 -2px;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                list-style: none;
+                padding: 15px 20px;
+                left: 50%;
+                @include translate2D(-50%,0);
+                border-top: 5px solid $blue-primary-color;
 
-            li {
-                position: relative;
-                border-bottom: 1px solid #7bc7e8;
+                li {
+                    position: relative;
+                    border-bottom: 1px solid #7bc7e8;
 
-                &:last-child {
-                    border-bottom: 0;
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+
+                    &:before {
+                        content: "\f111";
+                        font: normal normal normal 14px/1 FontAwesome;
+                        color: #00AAEB;
+                        font-size: 8px;
+                        position: absolute;
+                        left: 0;
+                        top: 15px;
+                    }
+
+                    a {
+                        padding: 10px 15px;
+                    }
                 }
+            }
 
-                &:before {
-                    content: "\f111";
-                    font: normal normal normal 14px/1 FontAwesome;
-                    color: #00AAEB;
-                    font-size: 8px;
-                    position: absolute;
-                    left: 0;
-                    top: 15px;
-                }
-
-                a {
-                    padding: 10px 15px;
+            &.active {
+                .dropdown-menu.sub-menu {
+                    margin-top: 3px;
+                    border-top: none;
                 }
             }
         }

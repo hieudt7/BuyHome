@@ -2980,14 +2980,14 @@ header {
         padding: 17px 9px; }
     header .menu .nav .open > a, header .menu .nav .open > a:hover, header .menu .nav .open > a:focus {
       background-color: transparent; }
-    header .menu .dropdown-menu.sub-menu {
+    header .menu li .dropdown-menu.sub-menu {
       min-width: 160px;
       border: 0;
       background-color: transparent;
       box-shadow: none;
       -webkit-box-shadow: none;
       background-image: url("../images/sub_menu.PNG");
-      background-position-y: -2px;
+      background-position: 0 -2px;
       background-repeat: no-repeat;
       background-size: 100% 100%;
       list-style: none;
@@ -2999,12 +2999,12 @@ header {
       -o-transform: translate(-50%, 0);
       -ms-transform: translate(-50%, 0);
       border-top: 5px solid #00AAEB; }
-      header .menu .dropdown-menu.sub-menu li {
+      header .menu li .dropdown-menu.sub-menu li {
         position: relative;
         border-bottom: 1px solid #7bc7e8; }
-        header .menu .dropdown-menu.sub-menu li:last-child {
+        header .menu li .dropdown-menu.sub-menu li:last-child {
           border-bottom: 0; }
-        header .menu .dropdown-menu.sub-menu li:before {
+        header .menu li .dropdown-menu.sub-menu li:before {
           content: "\f111";
           font: normal normal normal 14px/1 FontAwesome;
           color: #00AAEB;
@@ -3012,8 +3012,11 @@ header {
           position: absolute;
           left: 0;
           top: 15px; }
-        header .menu .dropdown-menu.sub-menu li a {
+        header .menu li .dropdown-menu.sub-menu li a {
           padding: 10px 15px; }
+    header .menu li.active .dropdown-menu.sub-menu {
+      margin-top: 3px;
+      border-top: none; }
   header .icon-mobile .fa-home,
   header .icon-mobile .fa-bars {
     display: none;
@@ -3104,6 +3107,11 @@ footer {
     footer .social {
       margin-top: 10px;
       margin-bottom: 15px; } }
+  @media screen and (max-width: 480px) {
+    footer .search-control {
+      width: 100%; }
+    footer .social {
+      float: left !important; } }
 
 .banner {
   min-height: 530px;
