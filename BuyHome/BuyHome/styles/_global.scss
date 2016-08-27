@@ -375,6 +375,7 @@ body {
     font-size: 16px;
     color: #3d3d3d;
     background-color: #e3e4e4;
+    position: relative;
 }
 
 .font-bold {
@@ -550,6 +551,16 @@ label.checkbox {
         height: 50px;
         top: -8px;
     }
+
+    &.blue {
+        background-color: $blue-primary-color;
+        color: #fff;
+        font-family: 'RobotoSlab-Regular';
+
+        &:before {
+            background-image: url('../images/ico_money.PNG');
+        }
+    }
 }
 
 img {
@@ -605,6 +616,7 @@ img {
     background-color: #fff;
 }
 
+
 @include device {
     img {
         max-width: 100%;
@@ -618,6 +630,10 @@ img {
 
 .auto-size {
     background-size: cover;
+
+    img {
+        max-width: 100%;
+    }
 }
 
 .search-control {
@@ -712,4 +728,105 @@ img {
     bottom: 185px;
     left: 0;
     z-index: -1;
+}
+
+.bread-crumb {
+    list-style: none;
+
+    li {
+        display: inline-block;
+        position: relative;
+        padding: 0 8px;
+
+        a {
+            color: #3d3d3d;
+            font-size: 12px;
+        }
+
+        &:last-child {
+            a {
+                color: $blue-primary-color;
+            }
+
+            &:before {
+                content: none;
+            }
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            height: 60%;
+            width: 1px;
+            background-color: #949494;
+            right: 0;
+            top: 20%;
+            @include translate2D(0,-20%);
+            margin-top: 2px;
+        }
+    }
+}
+
+.display-table {
+    display: table;
+    width: 100%;
+
+    .display-table-cell {
+        display: table-cell;
+    }
+}
+
+.vertical-middle {
+    vertical-align: middle;
+}
+
+.vertical-top {
+    vertical-align: top;
+}
+
+.vertical-bottom {
+    vertical-align: bottom;
+}
+
+.pagination.custom-paging {
+    li {
+        display: inline-block;
+        margin-right: 10px;
+
+        a {
+            background-color: #e5e5e5;
+            @include border-radius(50% !important);
+            width: 30px;
+            height: 30px;
+            font-size: 12px;
+            padding: 5px 7px;
+            color: #000;
+            text-align: center;
+
+            &:hover {
+                background-color: #00aaeb;
+                color: #fff;
+                border-color: #00aaeb;
+            }
+        }
+
+        &.active {
+            a {
+                background-color: #00aaeb;
+                color: #fff;
+                border-color: #00aaeb;
+            }
+        }
+
+        &.dot {
+            a {
+                width: 45px;
+                background-color: transparent;
+                border-color: transparent;
+                color: #e5e5e5;
+                font-size: 30px;
+                line-height: 0;
+            }
+        }
+    }
 }

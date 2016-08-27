@@ -2525,7 +2525,8 @@ body {
   font-family: 'RobotoSlab-Regular';
   font-size: 16px;
   color: #3d3d3d;
-  background-color: #e3e4e4; }
+  background-color: #e3e4e4;
+  position: relative; }
 
 .font-bold {
   font-family: 'RobotoSlab-Bold'; }
@@ -2648,6 +2649,12 @@ label.checkbox {
     width: 50px;
     height: 50px;
     top: -8px; }
+  .title-black.blue {
+    background-color: #00AAEB;
+    color: #fff;
+    font-family: 'RobotoSlab-Regular'; }
+    .title-black.blue:before {
+      background-image: url("../images/ico_money.PNG"); }
 
 img.responisve {
   width: 100%; }
@@ -2700,6 +2707,8 @@ img.responisve {
 
 .auto-size {
   background-size: cover; }
+  .auto-size img {
+    max-width: 100%; }
 
 .search-control {
   margin-top: 4px;
@@ -2791,6 +2800,79 @@ img.responisve {
   left: 0;
   z-index: -1; }
 
+.bread-crumb {
+  list-style: none; }
+  .bread-crumb li {
+    display: inline-block;
+    position: relative;
+    padding: 0 8px; }
+    .bread-crumb li a {
+      color: #3d3d3d;
+      font-size: 12px; }
+    .bread-crumb li:last-child a {
+      color: #00AAEB; }
+    .bread-crumb li:last-child:before {
+      content: none; }
+    .bread-crumb li:before {
+      content: "";
+      position: absolute;
+      height: 60%;
+      width: 1px;
+      background-color: #949494;
+      right: 0;
+      top: 20%;
+      transform: translate(0, -20%);
+      -webkit-transform: translate(0, -20%);
+      -moz-transform: translate(0, -20%);
+      -o-transform: translate(0, -20%);
+      -ms-transform: translate(0, -20%);
+      margin-top: 2px; }
+
+.display-table {
+  display: table;
+  width: 100%; }
+  .display-table .display-table-cell {
+    display: table-cell; }
+
+.vertical-middle {
+  vertical-align: middle; }
+
+.vertical-top {
+  vertical-align: top; }
+
+.vertical-bottom {
+  vertical-align: bottom; }
+
+.pagination.custom-paging li {
+  display: inline-block;
+  margin-right: 10px; }
+  .pagination.custom-paging li a {
+    background-color: #e5e5e5;
+    border-radius: 50% !important;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    padding: 5px 7px;
+    color: #000;
+    text-align: center; }
+    .pagination.custom-paging li a:hover {
+      background-color: #00aaeb;
+      color: #fff;
+      border-color: #00aaeb; }
+  .pagination.custom-paging li.active a {
+    background-color: #00aaeb;
+    color: #fff;
+    border-color: #00aaeb; }
+  .pagination.custom-paging li.dot a {
+    width: 45px;
+    background-color: transparent;
+    border-color: transparent;
+    color: #e5e5e5;
+    font-size: 30px;
+    line-height: 0; }
+
 *,
 *:before,
 *:after {
@@ -2877,7 +2959,7 @@ header {
         position: absolute;
         bottom: -3px;
         left: 0; }
-      header .menu ul.navbar-nav > li.active a {
+      header .menu ul.navbar-nav > li.active > a {
         color: #00b9ef; }
       header .menu ul.navbar-nav > li:before {
         content: "";
@@ -3062,7 +3144,6 @@ footer {
 
 .top-house {
   background-color: #4d4d4d;
-  min-height: 700px;
   padding-bottom: 30px; }
   .top-house .slider {
     padding-top: 75px;
@@ -3308,4 +3389,64 @@ footer {
             width: 105px; }
       .help .right-panel .most-view .view-more {
         margin-right: 15px; }
+
+.home-sale .banner-sm {
+  min-height: 325px;
+  background-image: url("../images/bg_banner_2.PNG");
+  background-size: cover;
+  margin-bottom: 4px; }
+
+.home-sale .top-house {
+  padding-bottom: 0; }
+  .home-sale .top-house .slider {
+    margin-bottom: 0; }
+
+.home-sale .title {
+  border-top: 1px solid #00b9ef;
+  display: block;
+  margin-bottom: 12px; }
+  .home-sale .title a {
+    background-color: #00b9ef;
+    color: #fff;
+    font-size: 13px;
+    padding: 3px 20px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px; }
+    .home-sale .title a:hover {
+      text-decoration: none; }
+
+.home-sale .current-news span {
+  display: block;
+  margin: 10px 0;
+  font-size: 14px; }
+
+.home-sale .list-news ul {
+  list-style: none; }
+  .home-sale .list-news ul li {
+    border-bottom: 1px solid #7fcbec;
+    padding: 5px 0; }
+    .home-sale .list-news ul li .display-table > span {
+      font-size: 14px; }
+      .home-sale .list-news ul li .display-table > span:first-child {
+        width: 110px;
+        min-width: 110px;
+        overflow: hidden; }
+        .home-sale .list-news ul li .display-table > span:first-child img {
+          max-width: 100%; }
+      .home-sale .list-news ul li .display-table > span:nth-child(2) {
+        padding: 0 5px; }
+
+.home-sale .list-item {
+  margin-top: 14px; }
+  .home-sale .list-item .row {
+    margin-left: -7px;
+    margin-right: -7px; }
+  .home-sale .list-item .item {
+    padding: 0 7px;
+    font-size: 13px;
+    margin-bottom: 14px; }
 
