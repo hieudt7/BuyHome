@@ -3,9 +3,8 @@ buyHome.common = {
     autoResizeImage: function () {
         $('.auto-size').each(function () {
             $(this).css('height', $(this).height());
-            $(this).css('width', $(this).width());
             $(this).css('background-image', 'url(' + $(this).find('img').attr('src') + ')');
-            $(this).find('img').remove();
+            $(this).find('img').hide();
 
         })
     }
